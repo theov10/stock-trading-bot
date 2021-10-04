@@ -1,2 +1,8 @@
+__pycache__/
+__pycache__
 credentials.py
 venv/
+.env
+.idea/
+
+
