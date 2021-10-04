@@ -21,7 +21,7 @@ def volume_checker(ticker_symbol) -> int:
         price = 0
 
 
-    print(ticker_symbol, ": Price: ", price, " Volume: ", volume)
+    #print(ticker_symbol, ": Price: ", price, " Volume: ", volume)
     if price > 0.04 and volume > 1:
         return 0.2
     elif price < -0.03 and volume > 0.8:
