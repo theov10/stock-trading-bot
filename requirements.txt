@@ -17,4 +17,5 @@ websockets
 yfinance
 nltk
 newsapi-python
+python-dotenv
 

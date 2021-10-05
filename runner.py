@@ -13,6 +13,7 @@ import stock_data_gatherer as sdg
 import util
 import news_classifier as nc
 import requests
+from keep_alive import keep_alive
 
 def daytrading_stock_analyzer(stocks):
     for stock_ticker in stocks: #purchases stocks based on daytrading patterns
@@ -58,8 +59,9 @@ def check_perform_sell(stock_ticker, purchase_price):
             del all_active_positions[stock_ticker]
             break
 
-if __name__ == "__main__":
+keep_alive()
 
+if __name__ == "__main__":    
     #Initializing important stuff
     news = news.NewsGetter()
     alpaca = alp.Alpaca()
