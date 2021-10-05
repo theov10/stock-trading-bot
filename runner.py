@@ -79,7 +79,7 @@ if __name__ == "__main__":
         try:
             print("New Iteration of Stock Scanning")
             current_time = datetime.now().strftime("%H:%M")
-            # current_time = "12:01"
+            print(current_time)
             if current_time > const.STOCK_MARKET_OPEN_TIME and current_time < const.STOCK_MARKET_CLOSE_TIME:
                 if first_time_run:
                     threading.Thread(target=stock_position_analyzer).start()
@@ -93,6 +93,7 @@ if __name__ == "__main__":
                 print("Market Close")
                 for stock_ticker in const.STOCKS_TO_CHECK: #purchases stocks based on news info
                     threading.Thread(target=news_stock_analyzer, args=(stock_ticker,)).start()
-                time.sleep(360000)
+                time.sleep(3600)
         except Exception as e:
+            print(e)
             print("Restarting")
